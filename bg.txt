@@ -1,0 +1,24 @@
+ public void bccolor(View v)
+    {
+        EditText t1,t2,t3;
+        t1=(EditText)findViewById(R.id.tex1);
+        t2=(EditText)findViewById(R.id.tex2);
+        t3=(EditText)findViewById(R.id.tex3);
+        int x=Integer.parseInt(t1.getText().toString());
+        int y=Integer.parseInt(t2.getText().toString());
+        int z=x+y;
+        t3.setText(String.valueOf(z));
+       if(z>10)
+        {
+            t3.setBackgroundColor(Color.GREEN);
+            String s=String.valueOf(z);
+            t3.setText(s);
+        }
+        else
+        {
+            t3.setBackgroundColor(Color.RED);
+            String s=String.valueOf(z);
+            t3.setText(s);
+        }
+
+    }
